@@ -1,5 +1,38 @@
 # Employment Attrition Analysis of Salifort-Motors 
 
+## Executive Summary
+
+![Executive Summary Document](https://github.com/Mitch-P-Analyst/Salifort-Motors/blob/main/Executive%20Summary.pdf)
+
+I analyzed a 15k-row HR dataset to understand attrition at Salifort Motors. 
+
+Employees with **more projects, higher monthly hours, longer tenure, and lower satisfaction were much more likely to leave**.
+
+Recommendations: 
+- Limit project assignments at ≤5
+- Limit average monthly hours ≤230
+- Rebalance workload for 3–4 year employees
+- Monitor satisfaction thresholds for predicting employees at risk of attrition.
+
+Best Model:
+- XGBoost classifier (cross-validated) 
+    - Achieved strong precision, recall (
+    - Ordered top features by gain (log-loss reduction)
+        - Satisfaction
+        - Number of Projects
+        - Tenure
+        - Previous Satisfaction
+        - Average Monthly Hours.
+
+Impact:
+- Reduces risk among the highest-attrition groups.
+
+Nest Steps:
+- Source information on **Type of Employee Departure** to further analysis attrition. 
+    - Fired
+    - Redundant
+    - Resignation
+
 ## Overview
 
 Google Advanced Data Analytics Capstone project. Built around the fictional french Salifort-Motors organisation, this repository utilises skills taught through Google's Advanced Data Analytics course such as project proposals, EDA, machine learning model building, statistical testing, PACE planning and stakeholder summaries to analyse and predict employee attrition.
@@ -109,7 +142,7 @@ To identify variable assocaitions with the target variable `left`, two classific
     - **XGBoost**
         - Cross Valdiation perofrmed to assess best hyperparameter metrics
             - Very strong prediction results
-        - Identified strong Feature Importance (assessed by **Gain**) for independet variables in reducing average log-loss for classification predicition
+        - Identified strong Feature Importance assessed by **Gain**. (Gain is the average reduction in log loss from splits using a feature (averaged over all trees). Higher gain ⇒ feature splits reduce log loss more.)
             - Satisfaction Level
                 - **44.0%** 
             - Number of Projects
@@ -134,6 +167,7 @@ Given this consistent improvement across all metrics, the **XGBoost** is the pre
 
 ### pacE: Execute
 
+#### Conclusion
 
 To conclude, after combining perspectives from these models, we identified a consistent pattern.
 
@@ -145,20 +179,31 @@ Employees assigned to **7 projects** have an **attrition rate of 100%**
 
 ![Project_statistics](https://github.com/Mitch-P-Analyst/Salifort-Motors/blob/main/Outputs/Project_Statistics.png?raw=true)
 
-![Conclusion_Charts]()
+![Conclusion_Charts](https://github.com/Mitch-P-Analyst/Salifort-Motors/blob/main/Outputs/Figure_6_Conclusion_Charts.png?raw=true)
 
-These results point to clear opportunties for improving attrition rates by **managing workload of tenured employees of ~3 - 4 years**.
+These results point to clear opportunties for improving attrition rates by **managing workload of tenured employees of ~3 - 4 years to address satisfaction levels**.
 
+#### Recommendations
 
+Reflecting upon the above visualisations and numbers presented in **Project Statistics**, this investigation recommends addressing the key variables that are supported by analysis to associate with **employee departure.**
 
-Data Understanding 
+- Rebalance Project Assignment
+    - Employees with the highest levels of mean Satisfaction Levels are assigned to 4 or 5 projects. **Restrict employees to a maximum of 5 projects.**
+- Restrict Employee Hours
+    - Restrict **Average Monthly Hours** for employees to the ranges presented by most satisfied employees, **a maximum of 230 hours**.
 
-Explain what data you used in your analysis, the timeframe of the data, and any data limitations. This is also a good section to add visualizations of your exploratory data analysis. 
+#### Next Steps
 
-Modeling and Evaluation 
+Further steps to improve this investigation may include
 
-This section should detail what models you used and the corresponding evaluation metrics. 
+- Sourcing information on **Type of Employee Departure**. 
+    - Fired
+    - Redundant
+    - Resignation
+    
+The data shows significant quantities of employees departed with medium and high satisfaction levels, primarily from collection of employees assigned to 2 project and in the departments of sales and human resources. 
 
-Conclusion
+Distinguishing between how employees left Salifort may assist in analyzing where employee resources may be reassigned to compensate over-worked employees working on 6 or 7 projects.
 
-In the conclusion section explain the recommendations you have in solving the business problem and highlight any future steps you will take to expand on your project, 
+- Assess Employee Previous Satisfaction Levels
+The XGBoost model identifies **Previous Satisfaction Levels** as a key indicator towards predicting an employees eventual departure. Analysis of threshold upon satisficlations could provide potential risk management of employee attrition to monitor work environment and maintain sufficient satisfaction levels.
