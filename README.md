@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-![Executive Summary Document](https://github.com/Mitch-P-Analyst/Salifort-Motors/blob/main/Salifort%20Motors%20Executive%20Summary.pdf)
+[Executive Summary Document](https://github.com/Mitch-P-Analyst/Salifort-Motors/blob/main/Salifort%20Motors%20Executive%20Summary.pdf)
 
 I analyzed a 15k-row HR dataset for Salifort Motors to understand drivers of attrition. Employees with **more projects, higher monthly hours, longer tenure, and lower satisfaction were much more likely to leave**.
 
@@ -107,8 +107,8 @@ python notebooks/01_notebook.ipynb
 │  ├─ 01_notebook.ipynb
 ├─ Outputs/                 # Chart and CSV Outputs
 ├─ .gitignore
-├─ Executive_Summary.pdf         
-└─ README.md
+├─ Executive_Summary.pdf    # Stakeholder One-Page Summary    
+└─ README.md                # This file
 ```
 
 

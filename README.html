@@ -1,0 +1,366 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/mitchellpalmer/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.8.20/crossnote/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="employment-attrition-analysis-of-salifort-motors">Employment Attrition Analysis of Salifort Motors </h1>
+<h2 id="executive-summary">Executive Summary </h2>
+<p><a href="https://github.com/Mitch-P-Analyst/Salifort-Motors/blob/main/Salifort%20Motors%20Executive%20Summary.pdf">Executive Summary Document</a></p>
+<p>I analyzed a 15k-row HR dataset for Salifort Motors to understand drivers of attrition. Employees with <strong>more projects, higher monthly hours, longer tenure, and lower satisfaction were much more likely to leave</strong>.</p>
+<p>Recommendations:</p>
+<ul>
+<li>Limit project assignments at ≤5</li>
+<li>Limit average monthly hours ≤230</li>
+<li>Rebalance workload for 3–4 year employees</li>
+<li>Monitor satisfaction thresholds for predicting employees at risk of attrition.</li>
+</ul>
+<p>Best Model:</p>
+<ul>
+<li>XGBoost classifier (cross-validated)
+<ul>
+<li>Achieved strong metrics
+<ul>
+<li>Precision: 0.98</li>
+<li>Recall: 0.91</li>
+<li>F1: 0.94</li>
+<li>Accuracy: 0.98</li>
+</ul>
+</li>
+<li>Ordered top Feature Importance by <strong>Gain</strong> (Gain is the average reduction in log-loss from splits using that feature (averaged across all trees).  i.e Higher gain = a feature split reduced log-loss more.)
+<ul>
+<li>Satisfaction: 44.0%</li>
+<li>Number of Projects: 23.3%</li>
+<li>Tenure: 13.8%</li>
+<li>Previous Satisfaction: 9.6%</li>
+<li>Average Monthly Hours: 6.9%</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Impact:</p>
+<ul>
+<li>Reduces risk among the highest-attrition groups.</li>
+</ul>
+<p>Next Steps:</p>
+<ul>
+<li>Address limitation of turnover between voluntary vs involuntary departures
+<ul>
+<li>Source information on <strong>Type of Employee Departure</strong> to further analysis attrition.
+<ul>
+<li>Fired</li>
+<li>Redundant</li>
+<li>Resignation</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="overview">Overview </h2>
+<p>Google Advanced Data Analytics Capstone project. Built around the fictional french Salifort Motors organisation, this repository utilises skills taught through Google's Advanced Data Analytics course such as project proposals, EDA, machine learning model building, statistical testing, PACE planning and stakeholder summaries to analyse and predict employee attrition.</p>
+<h3 id="provided-context">Provided Context </h3>
+<h4 id="about-the-company">About the company </h4>
+<p>Salifort Motors is a fictional French-based alternative energy vehicle manufacturer. Its global workforce of over 100,000 employees research, design, construct, validate, and distribute electric, solar, algae, and hydrogen-based vehicles. Salifort’s end-to-end vertical integration model has made it a global leader at the intersection of alternative energy and automobiles.</p>
+<h5 id="dataset">Dataset </h5>
+<p>A fictional datasets sourced from Kaggle, hosting 15,000 rows and 10 columns with the structure listed below:</p>
+<p><a href="https://www.kaggle.com/datasets/mfaisalqureshi/hr-analytics-and-job-prediction?select=HR_comma_sep.csv">Kaggle Hr Analytics Job Prediction</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>satisfaction_level</td>
+<td>Employee-reported job satisfaction level [0–1]</td>
+</tr>
+<tr>
+<td>last_evaluation</td>
+<td>Score of employee's last performance review [0–1]</td>
+</tr>
+<tr>
+<td>number_project</td>
+<td>Number of projects employee contributes to</td>
+</tr>
+<tr>
+<td>average_monthly_hours</td>
+<td>Average number of hours employee worked per month</td>
+</tr>
+<tr>
+<td>time_spend_company</td>
+<td>How long the employee has been with the company (years)</td>
+</tr>
+<tr>
+<td>Work_accident</td>
+<td>Whether or not the employee experienced an accident while at work</td>
+</tr>
+<tr>
+<td>left</td>
+<td>Whether or not the employee left the company</td>
+</tr>
+<tr>
+<td>promotion_last_5years</td>
+<td>Whether or not the employee was promoted in the last 5 years</td>
+</tr>
+</tbody>
+</table>
+<h4 id="scenario">Scenario </h4>
+<p>Currently, there is a high rate of turnover among Salifort employees. <strong>(Note: In this context, turnover data includes both employees who choose to quit their job and employees who are let go)</strong>. Salifort’s senior leadership team is concerned about how many employees are leaving the company. Salifort strives to create a corporate culture that supports employee success and professional development. Further, the high turnover rate is costly in the financial sense. Salifort makes a big investment in recruiting, training, and upskilling its employees.</p>
+<p>If Salifort could <strong>predict whether an employee will leave the company</strong>, and discover the reasons behind their departure, they could better understand the problem and develop a solution. Therefore, <strong>discover what’s likely to make the employee leave the company.</strong></p>
+<p>As a first step, the leadership team asks Human Resources to survey a sample of employees to learn more about what might be driving turnover.</p>
+<p>Next, the leadership team asks you to analyze the survey data and come up with ideas for how to increase employee retention. To help with this, they suggest you design a model that <strong>predicts whether an employee will leave the company based on their job title, department, number of projects, average monthly hours, and any other relevant data points.</strong> A good model will help the company <strong>increase retention and job satisfaction for current employees</strong>, and save money and time training new employees.</p>
+<p>As a specialist in data analysis, the leadership team leaves it up to you to choose an approach for building the most effective model to predict employee departure. For example, you could build and evaluate a statistical model such as logistic regression. Or, you could build and evaluate machine learning models such as decision tree, random forest, and XGBoost. Or, you could choose to deploy both statistical and machine learning models.</p>
+<p>For any approach, you’ll need to analyze the key factors driving employee turnover, build an effective model, and share recommendations for next steps with the leadership team.</p>
+<h4 id="deliverables">Deliverables </h4>
+<p>For this deliverable, you are asked to choose a method to approach this data challenge based on your prior course work.</p>
+<ul>
+<li>
+<p>Select either a regression model or a tree-based machine learning model to predict whether an employee will leave the company.</p>
+</li>
+<li>
+<p>Identify the top features that impact employees to leave the company</p>
+</li>
+</ul>
+<h4 id="stakeholders">Stakeholders </h4>
+<ul>
+<li>
+<p>Salifort Leadership team &amp; Executive team</p>
+<ul>
+<li>High overview of project and summaries</li>
+</ul>
+</li>
+<li>
+<p>Human Resources Department</p>
+<ul>
+<li>Coworkers &amp; Management
+<ul>
+<li>Mid-level overview if required</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="reproduce">Reproduce </h2>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token builtin class-name">cd</span> clone https://github.com/Mitch-P-Analyst/Salifort-Motors.git
+pip <span class="token function">install</span> <span class="token parameter variable">-r</span> requirements.txt
+python notebooks/01_notebook.ipynb
+</code></pre><h2 id="repository-structure">Repository Structure </h2>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>├─ Data/                    <span class="token comment"># Raw Data</span>
+├─ Models/                  <span class="token comment"># saved XGBoost Model</span>
+├─ notebooks/               <span class="token comment"># Singular notebook</span>
+│  ├─ 01_notebook.ipynb
+├─ Outputs/                 <span class="token comment"># Chart and CSV Outputs</span>
+├─ .gitignore
+├─ Executive_Summary.pdf    <span class="token comment"># Stakeholder One-Page Summary    </span>
+└─ README.md                <span class="token comment"># This file</span>
+</code></pre><h2 id="project-process">Project Process </h2>
+<h3 id="pace-planning">PACE: Planning </h3>
+<p>The provided Kaggle dataset contain 15,000 rows across 10 variable columns. Initial analysis identified necessary data structure, types and values to further investigate trends.</p>
+<ul>
+<li>Exploratory Data Analysis (EDA)
+<ul>
+<li>Cleaned provided dataset, identifying structural and information limitations
+<ul>
+<li>Duplicates / Null Values / Datatypes / Outliers</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="pace-analyze">PACE: Analyze </h3>
+<p>Visual analysis of variable trends was conducted with Matplotlib and Seaborn over a series of 5 figures. Observations were conducted between independent variables and target variable <code>left</code>, cross-variable relationships, <code>satisfaction_level</code> distributions and further associations.</p>
+<ul>
+<li>Continued EDA
+<ul>
+<li>Identify target variable class imbalance</li>
+</ul>
+</li>
+<li>Visualisations to observed assocations and trends among variables
+<ul>
+<li>Figures
+<ul>
+<li><a href="Outputs/Figure_1_Employee_Satisfaction_by_Factors.png">Figure_1_Employee_Satisfaction_by_Factors</a></li>
+<li><a href="Outputs/Figure_2_Cross_Variable_Relationships.png">Figure_2_Cross_Variable_Relationships</a></li>
+<li><a href="Outputs/Figure_3_Employees_Who_Left_Salifort_Motors.png">Figure_3_Employees_Who_Left_Salifort_Motors</a></li>
+<li><a href="Outputs/Figure_4_Distribution_of_Satisfaction_Levels_of_Departed_Employees.png">Figure_4_Distribution_of_Satisfaction_Levels_of_Departed_Employees</a>
+<ul>
+<li><img src="https://github.com/Mitch-P-Analyst/Salifort-Motors/blob/main/Outputs/Figure_4_Distribution_of_Satisfaction_Levels_of_Departed_Employees.png?raw=true" alt="Figure_4_Distribution_of_Satisfaction_Levels_of_Departed_Employees"></li>
+</ul>
+</li>
+<li><a href="Outputs/Figure_5_Satisfaction_Bands_of_Departed_Employees_vs_Number_of_Assigned_Project.png">Figure_5_Satisfaction_Bands_of_Departed_Employees_vs_Number_of_Assigned_Project</a></li>
+</ul>
+</li>
+<li>Key Observations
+<ul>
+<li>Three identifiable clusters of employees who <strong>departed</strong> Salifort Motors
+<ul>
+<li>Low Satisfaction Cluster (x &lt;= 0.12)</li>
+<li>Mid Satisfaction Cluster (0.31 &lt;= x &lt;= 0.48)</li>
+<li>High Satisfaction Cluster (0.70 &lt;= x)</li>
+</ul>
+</li>
+<li>Majority of all <strong>Low Satisfaction Level Employees who departed</strong> were on <strong>6 or 7 projects</strong>.</li>
+<li>Employee satisfaction level has visible associations with the <strong>number of projects</strong>; strong association with assignment to <strong>6 and 7 different projects</strong> and moderate association with assignment to <strong>2 different projects.</strong></li>
+<li>Additional factor <strong>tenure</strong> has moderate associations with employee satisfaction level for duration of <strong>3 and 4 years</strong>.</li>
+</ul>
+</li>
+<li>Limitations
+<ul>
+<li>Unable to differentiate between employees who left voluntarily and those who were fired or made redundant.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Inference from these visualisations in the Analyze stage show departed employees with <strong>low levels of satisfaction</strong> were assigned to <strong>6 or 7 projects</strong>. The majority of whom are employees with <strong>4 years of tenure, working higher average monthly hours</strong>. These observed associations became a focal point for further analysis as we discover what factors are leading to employee attrition.</p>
+<h3 id="pace-construct">PACE: Construct </h3>
+<p>To identify variable associations with the target variable <code>left</code>, two classification prediction models were produced to identify potential relationships and assess utility for future Human Resources assessments on at-risk employees.</p>
+<ul>
+<li>
+<p>Clear baseline model</p>
+<ul>
+<li><strong>Logistic Regression</strong>
+<ul>
+<li>Poor prediction results</li>
+<li>Identified strong odds-ratios for independent variables
+<ul>
+<li><strong>Satisfaction level increase of 0.1 is associated with ≈33% lower odds of leaving</strong></li>
+<li><strong>Each additional year of tenure is associated with ≈30% higher odds of leaving</strong></li>
+<li><strong>A promotion in the last five years reduces the odds of leaving by roughly ≈76%.</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Descriptive precise metrics</p>
+<ul>
+<li><strong>XGBoost</strong>
+<ul>
+<li>Cross Validation performed to assess best hyperparameter metrics
+<ul>
+<li>Very strong prediction results</li>
+</ul>
+</li>
+<li>Identified strong Feature Importance assessed by <strong>Gain</strong>. (Gain is the average reduction in log loss from splits using a feature (averaged over all trees). Higher gain ⇒ feature splits reduce log loss more.)
+<ul>
+<li>Satisfaction Level
+<ul>
+<li><strong>44.0%</strong></li>
+</ul>
+</li>
+<li>Number of Projects
+<ul>
+<li><strong>23.3%</strong></li>
+</ul>
+</li>
+<li>Tenure
+<ul>
+<li><strong>13.8%</strong></li>
+</ul>
+</li>
+<li>Previous Satisfaction Level
+<ul>
+<li><strong>9.6%</strong></li>
+</ul>
+</li>
+<li>Average Monthly Hours
+<ul>
+<li><strong>6.9%</strong></li>
+</ul>
+</li>
+<li>All Department Types
+<ul>
+<li><strong>≈2.5%</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Interpretation</strong>: <em>These percentages are not effect sizes; they show how often and how usefully a feature was used across the boosted trees to reduce log-loss.</em></p>
+<ul>
+<li>Prediction Evaluation Metrics</li>
+</ul>
+<p><img src="https://github.com/Mitch-P-Analyst/Salifort-Motors/blob/main/Outputs/model_prediction_metrics.png?raw=true" alt="model_predicition_metrics"></p>
+<p>As seen in model metrics, the XGBoost Classification model produced extremely high evaluation metrics. Higher than the Logistic Regression model across metrics <code>Precision, Recall, F1, Accuracy</code>.</p>
+<p>Given this consistent improvement across all metrics, the <strong>XGBoost</strong> is the preferred model for predicting future employee attrition at Salifort Motors.</p>
+<h3 id="pace-execute">PACE: Execute </h3>
+<h4 id="conclusion">Conclusion </h4>
+<p>To conclude, after combining perspectives from these models, we identified a consistent pattern.</p>
+<p>Employees working on <strong>higher number of projects, a workload with higher monthly hours, longer tenure, lower satisfaction, are much more likely to leave</strong>.</p>
+<p>Departed employees with the lowest satisfaction levels were assigned to <strong>6 or 7 different projects</strong>. Examining all employees, past and present, from data provided, employees assigned to 6 or 7 projects are associated with the <strong>highest average monthly hours</strong> and are <strong>tenured employees around ≈4 years</strong>.</p>
+<p>Employees assigned to <strong>7 projects</strong> have an <strong>attrition rate of 100%</strong></p>
+<p><img src="https://github.com/Mitch-P-Analyst/Salifort-Motors/blob/main/Outputs/Project_Statistics.png?raw=true" alt="Project_statistics"></p>
+<p><img src="https://github.com/Mitch-P-Analyst/Salifort-Motors/blob/main/Outputs/Figure_6_Conclusion_Charts.png?raw=true" alt="Conclusion_Charts"></p>
+<p>These results point to clear opportunities for improving attrition rates by <strong>managing workload of tenured employees of ~3 - 4 years to address satisfaction levels</strong>.</p>
+<h4 id="recommendations">Recommendations </h4>
+<p>Reflecting upon the above visualisations and numbers presented in <strong>Project Statistics</strong>, this investigation recommends addressing the key variables that are supported by analysis to associate with <strong>employee departure.</strong></p>
+<ul>
+<li>Rebalance Project Assignment
+<ul>
+<li>Employees with the highest levels of mean Satisfaction Levels are assigned to 4 or 5 projects. <strong>Restrict employees to a maximum of 5 projects.</strong></li>
+</ul>
+</li>
+<li>Restrict Employee Hours
+<ul>
+<li>Restrict <strong>Average Monthly Hours</strong> for employees to the ranges presented by most satisfied employees, <strong>a maximum of 230 hours</strong>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="limitations--next-steps">Limitations &amp; Next Steps </h4>
+<p>Further steps to improve this investigation may include</p>
+<ul>
+<li>Sourcing information on <strong>Type of Employee Departure</strong>.
+<ul>
+<li>Fired</li>
+<li>Redundant</li>
+<li>Resignation</li>
+</ul>
+</li>
+</ul>
+<p>The data shows significant quantities of employees departed with medium and high satisfaction levels, primarily from collection of employees assigned to 2 project and in the departments of sales and human resources.</p>
+<p>Distinguishing between how employees left Salifort may assist in analyzing where employee resources may be reassigned to compensate over-worked employees working on 6 or 7 projects.</p>
+<ul>
+<li>Assess Employee Previous Satisfaction Levels<br>
+The XGBoost model identifies <strong>Previous Satisfaction Levels</strong> as a key indicator towards predicting an employees eventual departure. Analysis of threshold upon satisfaction could provide potential risk management of employee attrition to monitor work environment and maintain sufficient satisfaction levels.</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
