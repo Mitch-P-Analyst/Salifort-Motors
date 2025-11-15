@@ -1,10 +1,10 @@
-# Employment Attrition Analysis of Salifort-Motors 
+# Employment Attrition Analysis of Salifort Motors 
 
 ## Executive Summary
 
 ![Executive Summary Document](https://github.com/Mitch-P-Analyst/Salifort-Motors/blob/main/Executive%20Summary.pdf)
 
-I analyzed a 15k-row HR dataset to understand attrition at Salifort Motors. 
+I analyzed a 15k-row HR dataset for Salifort Motors to understand drivers of attrition. Employees with more projects, higher monthly hours, longer tenure, and lower satisfaction were much more likely to leave. Recommended actions: cap projects at ≤5 and limit average monthly hours to ≤230—especially for 3–4-year employees. The cross-validated XGBoost classifier delivered precision 0.98 and recall 0.91; feature importance by gain ranked Satisfaction, Number of Projects, Tenure, Previous Satisfaction, then Average Monthly Hours.
 
 Employees with **more projects, higher monthly hours, longer tenure, and lower satisfaction were much more likely to leave**.
 
@@ -16,34 +16,39 @@ Recommendations:
 
 Best Model:
 - XGBoost classifier (cross-validated) 
-    - Achieved strong precision, recall (
-    - Ordered top features by gain (log-loss reduction)
-        - Satisfaction
-        - Number of Projects
-        - Tenure
-        - Previous Satisfaction
-        - Average Monthly Hours.
+    - Achieved strong metrics
+        - Precision: 0.98
+        - Recall: 0.91
+        - F1: 0.94
+        - Accuracy: 0.98
+    - Ordered top Feature Importance by **Gain** (Gain is the average reduction in log-loss from splits using that feature (averaged across all trees).  i.e Higher gain = a feature split reduced log-loss more.)
+        - Satisfaction: 44.0%
+        - Number of Projects: 23.3%
+        - Tenure: 13.8%
+        - Previous Satisfaction: 9.6%
+        - Average Monthly Hours: 6.9%
 
 Impact:
 - Reduces risk among the highest-attrition groups.
 
-Nest Steps:
-- Source information on **Type of Employee Departure** to further analysis attrition. 
-    - Fired
-    - Redundant
-    - Resignation
+Next Steps:
+- Address limitation of turnover between voluntary vs involuntary departures 
+    - Source information on **Type of Employee Departure** to further analysis attrition. 
+        - Fired
+        - Redundant
+        - Resignation
 
 ## Overview
 
-Google Advanced Data Analytics Capstone project. Built around the fictional french Salifort-Motors organisation, this repository utilises skills taught through Google's Advanced Data Analytics course such as project proposals, EDA, machine learning model building, statistical testing, PACE planning and stakeholder summaries to analyse and predict employee attrition.
+Google Advanced Data Analytics Capstone project. Built around the fictional french Salifort Motors organisation, this repository utilises skills taught through Google's Advanced Data Analytics course such as project proposals, EDA, machine learning model building, statistical testing, PACE planning and stakeholder summaries to analyse and predict employee attrition.
 
-## Provided Context
+###  Provided Context
    
-### About the company
+#### About the company
 Salifort Motors is a fictional French-based alternative energy vehicle manufacturer. Its global workforce of over 100,000 employees research, design, construct, validate, and distribute electric, solar, algae, and hydrogen-based vehicles. Salifort’s end-to-end vertical integration model has made it a global leader at the intersection of alternative energy and automobiles.        
 
-#### Dataset
-A ficitional datasets sourced from Kaggle, hosting 15,000 rows and 10 columns with the structure listed below:
+##### Dataset
+A fictional datasets sourced from Kaggle, hosting 15,000 rows and 10 columns with the structure listed below:
 
 [Kaggle Hr Analytics Job Prediction](https://www.kaggle.com/datasets/mfaisalqureshi/hr-analytics-and-job-prediction?select=HR_comma_sep.csv).
 
@@ -59,7 +64,7 @@ Work_accident|Whether or not the employee experienced an accident while at work
 left|Whether or not the employee left the company
 promotion_last_5years|Whether or not the employee was promoted in the last 5 years
 
-### Scenario
+#### Scenario
 
 Currently, there is a high rate of turnover among Salifort employees. **(Note: In this context, turnover data includes both employees who choose to quit their job and employees who are let go)**. Salifort’s senior leadership team is concerned about how many employees are leaving the company. Salifort strives to create a corporate culture that supports employee success and professional development. Further, the high turnover rate is costly in the financial sense. Salifort makes a big investment in recruiting, training, and upskilling its employees. 
 
@@ -73,35 +78,52 @@ As a specialist in data analysis, the leadership team leaves it up to you to cho
 
 For any approach, you’ll need to analyze the key factors driving employee turnover, build an effective model, and share recommendations for next steps with the leadership team. 
 
-### Your business case
-As a data specialist working for Salifort Motors, you have received the results of a recent employee survey. The senior leadership team has tasked you with analyzing the data to come up with ideas for how to increase employee retention. To help with this, they would like you to design a model that predicts whether an employee will leave the company based on their  department, number of projects, average monthly hours, and any other data points you deem helpful. 
-
-### Deliverables
+#### Deliverables
 For this deliverable, you are asked to choose a method to approach this data challenge based on your prior course work. 
 
 - Select either a regression model or a tree-based machine learning model to predict whether an employee will leave the company. 
 
 - Identify the top features that impact employees to leave the company
 
-### Stakeholders
-- Salifort Leaderteam & Executive team
+#### Stakeholders
+- Salifort Leadership team & Executive team
     - High overview of project and summaries
 
 - Human Resources Department
-    - Coworkers & Mangement
+    - Coworkers & Management
         - Mid-level overview if required
+
+## Reproduce
+
+``` bash
+cd clone https://github.com/Mitch-P-Analyst/Salifort-Motors.git
+pip install -r requirements.txt
+python notebooks/01_notebook.ipynb
+```
+
+## Repository Structure
+``` bash
+├─ Data/                    # Raw Data
+├─ Models/                  # saved XGBoost Model
+├─ notebooks/               # Singular notebook
+│  ├─ 01_notebook.ipynb
+├─ Outputs/                 # Chart and CSV Outputs
+├─ .gitignore
+├─ Executive_Summary.pdf         
+└─ README.md
+```
 
 
 ## Project Process
 
-### Pace: Planning
-The provided Kaggle dataset contain 15,000 rows across 10 variable columns. Initial analysis identifed necessary data structure, types and values to further investiage trends.
+### PACE: Planning
+The provided Kaggle dataset contain 15,000 rows across 10 variable columns. Initial analysis identified necessary data structure, types and values to further investigate trends.
 
 - Exploratory Data Analysis (EDA)
     - Cleaned provided dataset, identifying structural and information limitations
         - Duplicates / Null Values / Datatypes / Outliers
 
-### pAce: Analyze
+### PACE: Analyze
 Visual analysis of variable trends was conducted with Matplotlib and Seaborn over a series of 5 figures. Observations were conducted between independent variables and target variable `left`, cross-variable relationships, `satisfaction_level` distributions and further associations.
 
 - Continued EDA
@@ -115,7 +137,7 @@ Visual analysis of variable trends was conducted with Matplotlib and Seaborn ove
             - ![Figure_4_Distribution_of_Satisfaction_Levels_of_Departed_Employees](https://github.com/Mitch-P-Analyst/Salifort-Motors/blob/main/Outputs/Figure_4_Distribution_of_Satisfaction_Levels_of_Departed_Employees.png?raw=true)
         - [Figure_5_Satisfaction_Bands_of_Departed_Employees_vs_Number_of_Assigned_Project](Outputs/Figure_5_Satisfaction_Bands_of_Departed_Employees_vs_Number_of_Assigned_Project.png)
     - Key Observations
-        - Three identifible clusters of employees who **departed** Salifort Motors
+        - Three identifiable clusters of employees who **departed** Salifort Motors
             - Low Satisfaction Cluster (x <= 0.12)
             - Mid Satisfaction Cluster (0.31 <= x <= 0.48)
             - High Satisfaction Cluster (0.70 <= x)
@@ -123,12 +145,12 @@ Visual analysis of variable trends was conducted with Matplotlib and Seaborn ove
         - Employee satisfaction level has visible associations with the **number of projects**; strong association with assignment to **6 and 7 different projects** and moderate association with assignment to **2 different projects.** 
         - Additional factor **tenure** has moderate associations with employee satisfaction level for duration of **3 and 4 years**.
     - Limitations
-        - Unable to differentiate between employees who left voluntarily and those who were fired or made redunant.
+        - Unable to differentiate between employees who left voluntarily and those who were fired or made redundant.
         
 Inference from these visualisations in the Analyze stage show departed employees with **low levels of satisfaction** were assigned to **6 or 7 projects**. The majority of whom are employees with **4 years of tenure, working higher average monthly hours**. These observed associations became a focal point for further analysis as we discover what factors are leading to employee attrition.
 
-### paCe: Construct
-To identify variable assocaitions with the target variable `left`, two classification prediction models were produced to identify potential relationships and assess utility for future Human Resources assessments on at-risk employees.
+### PACE: Construct
+To identify variable associations with the target variable `left`, two classification prediction models were produced to identify potential relationships and assess utility for future Human Resources assessments on at-risk employees.
 
 - Clear baseline model
     - **Logistic Regression**
@@ -140,7 +162,7 @@ To identify variable assocaitions with the target variable `left`, two classific
     
 - Descriptive precise metrics
     - **XGBoost**
-        - Cross Valdiation perofrmed to assess best hyperparameter metrics
+        - Cross Validation performed to assess best hyperparameter metrics
             - Very strong prediction results
         - Identified strong Feature Importance assessed by **Gain**. (Gain is the average reduction in log loss from splits using a feature (averaged over all trees). Higher gain ⇒ feature splits reduce log loss more.)
             - Satisfaction Level
@@ -165,7 +187,7 @@ As seen in model metrics below, the XGBoost Classification model produced extrem
 
 Given this consistent improvement across all metrics, the **XGBoost** is the preferred model for predicting future employee attrition at Salifort Motors.
 
-### pacE: Execute
+### PACE: Execute
 
 #### Conclusion
 
@@ -173,7 +195,7 @@ To conclude, after combining perspectives from these models, we identified a con
 
 Employees working on **higher number of projects, a workload with higher monthly hours, longer tenure, lower satisfaction, are much more likely to leave**.
 
-Departed employees with the lowest satifaction levels were assigned to **6 or 7 different projects**. Examining all employees, past and present, from data provided, employees assigned to 6 or 7 projects are associated with the **highest average monthly hours** and are **tenured employees around ≈4 years**. 
+Departed employees with the lowest satisfaction levels were assigned to **6 or 7 different projects**. Examining all employees, past and present, from data provided, employees assigned to 6 or 7 projects are associated with the **highest average monthly hours** and are **tenured employees around ≈4 years**. 
 
 Employees assigned to **7 projects** have an **attrition rate of 100%**
 
@@ -181,7 +203,7 @@ Employees assigned to **7 projects** have an **attrition rate of 100%**
 
 ![Conclusion_Charts](https://github.com/Mitch-P-Analyst/Salifort-Motors/blob/main/Outputs/Figure_6_Conclusion_Charts.png?raw=true)
 
-These results point to clear opportunties for improving attrition rates by **managing workload of tenured employees of ~3 - 4 years to address satisfaction levels**.
+These results point to clear opportunities for improving attrition rates by **managing workload of tenured employees of ~3 - 4 years to address satisfaction levels**.
 
 #### Recommendations
 
@@ -192,7 +214,7 @@ Reflecting upon the above visualisations and numbers presented in **Project Stat
 - Restrict Employee Hours
     - Restrict **Average Monthly Hours** for employees to the ranges presented by most satisfied employees, **a maximum of 230 hours**.
 
-#### Next Steps
+#### Limitations & Next Steps
 
 Further steps to improve this investigation may include
 
@@ -206,4 +228,4 @@ The data shows significant quantities of employees departed with medium and high
 Distinguishing between how employees left Salifort may assist in analyzing where employee resources may be reassigned to compensate over-worked employees working on 6 or 7 projects.
 
 - Assess Employee Previous Satisfaction Levels
-The XGBoost model identifies **Previous Satisfaction Levels** as a key indicator towards predicting an employees eventual departure. Analysis of threshold upon satisficlations could provide potential risk management of employee attrition to monitor work environment and maintain sufficient satisfaction levels.
+The XGBoost model identifies **Previous Satisfaction Levels** as a key indicator towards predicting an employees eventual departure. Analysis of threshold upon satisfaction could provide potential risk management of employee attrition to monitor work environment and maintain sufficient satisfaction levels.

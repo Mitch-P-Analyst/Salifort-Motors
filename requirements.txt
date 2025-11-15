@@ -1,0 +1,12 @@
+dataframe_image>=0.2.7
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.5
+xgboost>=2.0
+matplotlib>=3.8
+seaborn>=0.13
+scipy>=1.11
+shap>=0.45
+scikit-posthocs>=0.9
+statsmodels>=0.14
+jupyterlab>=4.0 

@@ -1,3 +1,7 @@
+# Google Course Formatted file
+Activity_Course_7_Salifort_Motors_project_lab.ipynb
+PACE_strategy_document.docx
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -205,3 +209,5 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
