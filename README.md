@@ -7,12 +7,15 @@
 I analyzed a 15k-row HR dataset for Salifort Motors to understand drivers of attrition. Employees with **more projects, higher monthly hours, longer tenure, and lower satisfaction were much more likely to leave**.
 
 Recommendations: 
+
 - Limit project assignments at ≤5
 - Limit average monthly hours ≤230
 - Rebalance workload for 3–4 year employees
 - Monitor satisfaction thresholds for predicting employees at risk of attrition.
 
+
 Best Model:
+
 - XGBoost classifier (cross-validated) 
     - Achieved strong metrics
         - Precision: 0.98
@@ -27,6 +30,7 @@ Best Model:
         - Average Monthly Hours: 6.9%
 
 Impact:
+
 - Reduces risk among the highest-attrition groups.
 
 Next Steps:
@@ -122,7 +126,7 @@ The provided Kaggle dataset contain 15,000 rows across 10 variable columns. Init
         - Duplicates / Null Values / Datatypes / Outliers
 
 ### PACE: Analyze
-Visual analysis of variable trends was conducted with Matplotlib and Seaborn over a series of 5 figures. Observations were conducted between independent variables and target variable `left`, cross-variable relationships, `satisfaction_level` distributions and further associations.
+Visual analysis of variable trends was conducted with Matplotlib and Seaborn over a series of 5 figures. Observations were conducted between independent variables and target variable **left**, cross-variable relationships, **satisfaction_level** distributions and further associations.
 
 - Continued EDA
     - Identify target variable class imbalance
@@ -145,10 +149,10 @@ Visual analysis of variable trends was conducted with Matplotlib and Seaborn ove
     - Limitations
         - Unable to differentiate between employees who left voluntarily and those who were fired or made redundant.
         
-Inference from these visualisations in the Analyze stage show departed employees with **low levels of satisfaction** were assigned to **6 or 7 projects**. The majority of whom are employees with **4 years of tenure, working higher average monthly hours**. These observed associations became a focal point for further analysis as we discover what factors are leading to employee attrition.
+Inference from these visualisations in the Analyze stage show departed employees with **low levels of satisfaction** were assigned to **6 or 7 projects**. The majority of whom are employees with **4 years of tenure, working higher average monthly hours**. These observed associations became a focal point for further analysis as I discover what factors are leading to employee attrition.
 
 ### PACE: Construct
-To identify variable associations with the target variable `left`, two classification prediction models were produced to identify potential relationships and assess utility for future Human Resources assessments on at-risk employees.
+To identify variable associations with the target variable **left**, two classification prediction models were produced to identify potential relationships and assess utility for future Human Resources assessments on at-risk employees.
 
 - Clear baseline model
     - **Logistic Regression**
@@ -190,7 +194,7 @@ Given this consistent improvement across all metrics, the **XGBoost** is the pre
 
 #### Conclusion
 
-To conclude, after combining perspectives from these models, we identified a consistent pattern.
+To conclude, after combining perspectives from these models, I identified a consistent pattern.
 
 Employees working on **higher number of projects, a workload with higher monthly hours, longer tenure, lower satisfaction, are much more likely to leave**.
 

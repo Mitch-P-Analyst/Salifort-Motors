@@ -35,6 +35,7 @@
 <li>Rebalance workload for 3–4 year employees</li>
 <li>Monitor satisfaction thresholds for predicting employees at risk of attrition.</li>
 </ul>
+<br>
 <p>Best Model:</p>
 <ul>
 <li>XGBoost classifier (cross-validated)
@@ -59,6 +60,7 @@
 </ul>
 </li>
 </ul>
+<br>
 <p>Impact:</p>
 <ul>
 <li>Reduces risk among the highest-attrition groups.</li>
@@ -191,7 +193,7 @@ python notebooks/01_notebook.ipynb
 </li>
 </ul>
 <h3 id="pace-analyze">PACE: Analyze </h3>
-<p>Visual analysis of variable trends was conducted with Matplotlib and Seaborn over a series of 5 figures. Observations were conducted between independent variables and target variable <code>left</code>, cross-variable relationships, <code>satisfaction_level</code> distributions and further associations.</p>
+<p>Visual analysis of variable trends was conducted with Matplotlib and Seaborn over a series of 5 figures. Observations were conducted between independent variables and target variable <strong>left</strong>, cross-variable relationships, <strong>satisfaction_level</strong> distributions and further associations.</p>
 <ul>
 <li>Continued EDA
 <ul>
@@ -235,9 +237,9 @@ python notebooks/01_notebook.ipynb
 </ul>
 </li>
 </ul>
-<p>Inference from these visualisations in the Analyze stage show departed employees with <strong>low levels of satisfaction</strong> were assigned to <strong>6 or 7 projects</strong>. The majority of whom are employees with <strong>4 years of tenure, working higher average monthly hours</strong>. These observed associations became a focal point for further analysis as we discover what factors are leading to employee attrition.</p>
+<p>Inference from these visualisations in the Analyze stage show departed employees with <strong>low levels of satisfaction</strong> were assigned to <strong>6 or 7 projects</strong>. The majority of whom are employees with <strong>4 years of tenure, working higher average monthly hours</strong>. These observed associations became a focal point for further analysis as I discover what factors are leading to employee attrition.</p>
 <h3 id="pace-construct">PACE: Construct </h3>
-<p>To identify variable associations with the target variable <code>left</code>, two classification prediction models were produced to identify potential relationships and assess utility for future Human Resources assessments on at-risk employees.</p>
+<p>To identify variable associations with the target variable <strong>left</strong>, two classification prediction models were produced to identify potential relationships and assess utility for future Human Resources assessments on at-risk employees.</p>
 <ul>
 <li>
 <p>Clear baseline model</p>
@@ -305,6 +307,7 @@ python notebooks/01_notebook.ipynb
 </ul>
 </li>
 </ul>
+<br>
 <p><strong>Interpretation</strong>: <em>These percentages are not effect sizes; they show how often and how usefully a feature was used across the boosted trees to reduce log-loss.</em></p>
 <ul>
 <li>Prediction Evaluation Metrics</li>
@@ -314,7 +317,7 @@ python notebooks/01_notebook.ipynb
 <p>Given this consistent improvement across all metrics, the <strong>XGBoost</strong> is the preferred model for predicting future employee attrition at Salifort Motors.</p>
 <h3 id="pace-execute">PACE: Execute </h3>
 <h4 id="conclusion">Conclusion </h4>
-<p>To conclude, after combining perspectives from these models, we identified a consistent pattern.</p>
+<p>To conclude, after combining perspectives from these models, I identified a consistent pattern.</p>
 <p>Employees working on <strong>higher number of projects, a workload with higher monthly hours, longer tenure, lower satisfaction, are much more likely to leave</strong>.</p>
 <p>Departed employees with the lowest satisfaction levels were assigned to <strong>6 or 7 different projects</strong>. Examining all employees, past and present, from data provided, employees assigned to 6 or 7 projects are associated with the <strong>highest average monthly hours</strong> and are <strong>tenured employees around ≈4 years</strong>.</p>
 <p>Employees assigned to <strong>7 projects</strong> have an <strong>attrition rate of 100%</strong></p>
