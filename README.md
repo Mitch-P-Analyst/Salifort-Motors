@@ -4,9 +4,7 @@
 
 ![Executive Summary Document](https://github.com/Mitch-P-Analyst/Salifort-Motors/blob/main/Salifort%20Motors%20Executive%20Summary.pdf)
 
-I analyzed a 15k-row HR dataset for Salifort Motors to understand drivers of attrition. Employees with more projects, higher monthly hours, longer tenure, and lower satisfaction were much more likely to leave. Recommended actions: cap projects at ≤5 and limit average monthly hours to ≤230—especially for 3–4-year employees. The cross-validated XGBoost classifier delivered precision 0.98 and recall 0.91; feature importance by gain ranked Satisfaction, Number of Projects, Tenure, Previous Satisfaction, then Average Monthly Hours.
-
-Employees with **more projects, higher monthly hours, longer tenure, and lower satisfaction were much more likely to leave**.
+I analyzed a 15k-row HR dataset for Salifort Motors to understand drivers of attrition. Employees with **more projects, higher monthly hours, longer tenure, and lower satisfaction were much more likely to leave**.
 
 Recommendations: 
 - Limit project assignments at ≤5
@@ -181,9 +179,10 @@ To identify variable associations with the target variable `left`, two classific
 **Interpretation**: *These percentages are not effect sizes; they show how often and how usefully a feature was used across the boosted trees to reduce log-loss.*
 
 - Prediction Evaluation Metrics
+
 ![model_predicition_metrics](https://github.com/Mitch-P-Analyst/Salifort-Motors/blob/main/Outputs/model_prediction_metrics.png?raw=true)
 
-As seen in model metrics below, the XGBoost Classification model produced extremely high evaluation metrics. Higher than the Logistic Regression model across metrics `Precision, Recall, F1, Accuracy`.
+As seen in model metrics, the XGBoost Classification model produced extremely high evaluation metrics. Higher than the Logistic Regression model across metrics `Precision, Recall, F1, Accuracy`.
 
 Given this consistent improvement across all metrics, the **XGBoost** is the preferred model for predicting future employee attrition at Salifort Motors.
 
